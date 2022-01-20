@@ -1,0 +1,191 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 100%;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#root {
+  height: 100vh;
+}
+
+#root .app {
+  border-radius: 8px;
+  padding: 0.2em 0.2em 0.3em;
+  background: lightgray;
+  -webkit-box-shadow: 3px 3px 3px gray;
+          box-shadow: 3px 3px 3px gray;
+}
+
+#root .app .display {
+  border-radius: 8px 8px 0 0;
+  background: white;
+  padding: 0.2em;
+  font-size: 3rem;
+  text-align: right;
+  margin-bottom: 0.1em;
+  -webkit-box-shadow: 1px 1px 3px white;
+          box-shadow: 1px 1px 3px white;
+}
+
+#root .app .pads {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (80px)[4];
+      grid-template-columns: repeat(4, 80px);
+  -ms-grid-rows: (60px)[5];
+      grid-template-rows: repeat(5, 60px);
+  gap: 4px;
+      grid-template-areas: "plus  minus divide multiply" "seven eight nine   equal" "four  five  six    equal" "one   two   three  equal" "zero  dot   clear  ac";
+}
+
+#root .app .pads .pad {
+  background: gray;
+  font-size: 1.6rem;
+  -webkit-box-shadow: 2px 2px 2px gray;
+          box-shadow: 2px 2px 2px gray;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+#root .app .pads .pad:hover {
+  background: black;
+  color: white;
+}
+
+#root .app .pads .pad:active {
+  -webkit-transform: translate(1px, 1px);
+          transform: translate(1px, 1px);
+}
+
+#root .app .pads .pad.plus {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: plus;
+}
+
+#root .app .pads .pad.minus {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: minus;
+}
+
+#root .app .pads .pad.divide {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: divide;
+}
+
+#root .app .pads .pad.multiply {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: multiply;
+}
+
+#root .app .pads .pad.nine {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: nine;
+}
+
+#root .app .pads .pad.eight {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: eight;
+}
+
+#root .app .pads .pad.seven {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: seven;
+}
+
+#root .app .pads .pad.six {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: six;
+}
+
+#root .app .pads .pad.five {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: five;
+}
+
+#root .app .pads .pad.four {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: four;
+}
+
+#root .app .pads .pad.three {
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
+  grid-area: three;
+}
+
+#root .app .pads .pad.two {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: two;
+}
+
+#root .app .pads .pad.one {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: one;
+}
+
+#root .app .pads .pad.zero {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: zero;
+}
+
+#root .app .pads .pad.dot {
+  -ms-grid-row: 5;
+  -ms-grid-column: 2;
+  grid-area: dot;
+}
+
+#root .app .pads .pad.equal {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 4;
+  grid-area: equal;
+}
+
+#root .app .pads .pad.clear {
+  -ms-grid-row: 5;
+  -ms-grid-column: 3;
+  grid-area: clear;
+}
+
+#root .app .pads .pad.ac {
+  -ms-grid-row: 5;
+  -ms-grid-column: 4;
+  grid-area: ac;
+}
+/*# sourceMappingURL=style.css.map */

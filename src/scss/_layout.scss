@@ -1,0 +1,105 @@
+#root {
+  height: 100vh;
+
+  .app {
+    border-radius: 8px;
+    padding: 0.2em 0.2em 0.3em;
+    background: lightgray;
+    box-shadow: 3px 3px 3px gray;
+
+    .display {
+      border-radius: 8px 8px 0 0;
+      background: white;
+      padding: 0.2em;
+      font-size: 3rem;
+      text-align: right;
+      margin-bottom: 0.1em;
+      box-shadow: 1px 1px 3px white;
+    }
+
+    .pads {
+      display: flex;
+      display: grid;
+      grid-template-columns: repeat(4, 80px);
+      grid-template-rows: repeat(5, 60px);
+      gap: 4px;
+      grid-template-areas:
+        "plus  minus divide multiply"
+        "seven eight nine   equal"
+        "four  five  six    equal"
+        "one   two   three  equal"
+        "zero  dot   clear  ac";
+
+      .pad {
+        background: gray;
+        font-size: 1.6rem;
+        box-shadow: 2px 2px 2px gray;
+        transition: all 200ms ease-in-out;
+
+        &:hover {
+          background: black;
+          color: white;
+        }
+
+        &:active {
+          transform: translate(1px, 1px);
+        }
+
+        &.plus {
+          grid-area: plus;
+        }
+        &.minus {
+          grid-area: minus;
+        }
+        &.divide {
+          grid-area: divide;
+        }
+        &.multiply {
+          grid-area: multiply;
+        }
+        &.nine {
+          grid-area: nine;
+        }
+        &.eight {
+          grid-area: eight;
+        }
+        &.seven {
+          grid-area: seven;
+        }
+        &.six {
+          grid-area: six;
+        }
+        &.five {
+          grid-area: five;
+        }
+        &.four {
+          grid-area: four;
+        }
+        &.three {
+          grid-area: three;
+        }
+        &.two {
+          grid-area: two;
+        }
+        &.one {
+          grid-area: one;
+        }
+        &.zero {
+          grid-area: zero;
+        }
+        &.dot {
+          grid-area: dot;
+        }
+        &.equal {
+          grid-area: equal;
+        }
+        &.clear {
+          grid-area: clear;
+        }
+        &.ac {
+          grid-area: ac;
+        }
+      }
+    }
+  }
+}
